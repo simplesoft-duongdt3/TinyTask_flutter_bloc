@@ -35,9 +35,7 @@ class AddTaskScreenBloc extends Bloc<AddTaskEvent, AddTaskState> {
 
   Future<void> createDailyTask(
       AddDailyTaskPresentationModel addTaskPresentationModel) async {
-    await Future.delayed(Duration(seconds: 10));
-    throw Exception("createDailyTask error");
-    //await _eventRepository.createDailyTask(_mapDailyTask(addTaskPresentationModel));
+    await _eventRepository.createDailyTask(_mapDailyTask(addTaskPresentationModel));
   }
 
   Future<void> createOneTimeTask(
